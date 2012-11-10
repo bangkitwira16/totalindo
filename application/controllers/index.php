@@ -1,4 +1,5 @@
 <?php
+
 if (!defined('BASEPATH'))
     exit('Script ini tidak diizinkan');
 
@@ -14,14 +15,27 @@ class Index extends CI_Controller {
         global $template;
         $template = "user";
     }
-    function index(){
+
+    function index() {
         $data = array(
-            'slider'=>'user/slider.php'
+            'slider' => 'user/slider.php'
         );
-        show("home",$data);
+        show("home", $data);
     }
-    function news(){
+
+    function news() {
         show("news");
+    }
+
+    function services() {
+        show("services");
+    }
+
+    function product() {
+        show("product");
+    }
+    function contact() {
+        show("contact");
     }
 
 }
